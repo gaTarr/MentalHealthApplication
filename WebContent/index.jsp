@@ -49,5 +49,12 @@
 	<input type="text" name="Q9"> <br>
 	<label>Total: </label> <input type="text" name="txtTotal"> 
 	<button name="btnTotal" onClick="totalIt()">Total</button><br>
+	<form action="loginServlet" method="post">
+		Username: <input type="text" name="username"> <br>
+		Password: <input type="text" name="password">
+		<input type="submit" value="Login">
+	</form>
+	<a href = "createAccount.jsp">Create an account</a><br />
 </body>
+<script src="index.js"></script>
 </html>
