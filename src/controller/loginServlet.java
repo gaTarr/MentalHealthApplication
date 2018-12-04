@@ -49,7 +49,7 @@ public class loginServlet extends HttpServlet {
 		
 		if(loginn == true) {
 			ServletUtils.storeUser(request.getSession(), thisUser);
-			response.sendRedirect("/results.jsp");
+			getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
 		}
 		
 	}

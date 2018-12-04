@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <title>Mental Health</title>
@@ -40,8 +39,11 @@
 </style>
 
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Mental Health</title>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="index.js"></script>
 </head>
 
 <header>
@@ -270,6 +272,13 @@
 	<label> ------------------------------------------------- </label> <br>
 	
 	<br>
+
+	<a href = "createAccount.jsp">Create an account</a><br />
+<div id="BarGraph">
+</div>
+
+</body>
+=======
 	<div class="border">
 		<label>Login: Username: </label><input type="text" id="userName"><label> Password: </label><input type="text" id="userPassword"><button id="btnLogin">Submit</button>
 		<label>         Sign-up</label>
