@@ -278,7 +278,6 @@
 </div>
 
 </body>
-=======
 	<div class="border">
 		<label>Login: Username: </label><input type="text" id="userName"><label> Password: </label><input type="text" id="userPassword"><button id="btnLogin">Submit</button>
 		<label>         Sign-up</label>
