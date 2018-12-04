@@ -257,7 +257,7 @@
 	<label> ------------------------------------------------- </label> <br>
 	<p>
 		<label> Obsessional Symptoms (Obsessive thoughts and compulsions against which the patient struggles)</label> <br>
-		<select id = "q14">
+		<select id = "q20">
 			<option value="0" selected>Absent</option>
 			<option value="1">Mild</option>
 			<option value="2">Severe</option>
@@ -268,9 +268,7 @@
 	<br>
 	<div class="border">
 		<label>Login: Username: </label><input type="text" id="userName"><label> Password: </label><input type="text" id="userPassword"><button id="btnLogin">Submit</button>
-	</div>
-	<div>
-		<label>Sign-up</label>
+		<label>         Sign-up</label>
 	</div> <br> <br>
 </body>
 <footer>
