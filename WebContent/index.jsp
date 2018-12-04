@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <title>Mental Health</title>
@@ -20,8 +19,11 @@
 	}
 </script>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Mental Health</title>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="index.js"></script>
 </head>
 <body>
 	<h1>Hello! This is a JSP page!</h1>
@@ -55,6 +57,9 @@
 		<input type="submit" value="Login">
 	</form>
 	<a href = "createAccount.jsp">Create an account</a><br />
+<div id="BarGraph">
+</div>
+
 </body>
-<script src="index.js"></script>
+
 </html>

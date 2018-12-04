@@ -18,22 +18,21 @@ public class LoginHelper {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		em.persist(u);
+		em.flush();
 		em.getTransaction().commit();
 		em.close();
-		
 	}
 
 	public boolean login(String username, String password) {
-		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("User");
+		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("users");
 		EntityManager em = emfactory.createEntityManager();
 		User results = null;
 		
 		try {
-			TypedQuery<User> query = em.createQuery("select u from users u where u.username = :username AND u.password = :password", User.class);
-			query.setParameter("username", username);
-			query.setParameter("password", password);
+			TypedQuery<User> query = em.createQuery("select u.username, u.password from User u where u.username = :selectedUsername AND u.password = :selectedPassword", User.class);
+			query.setParameter("selectedUsername", username);
+			query.setParameter("selectedPassword", password);
 			try {
-				User u = query.getSingleResult();
 				return true;
 			} catch(javax.persistence.NoResultException e)
 			{
