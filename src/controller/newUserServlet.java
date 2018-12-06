@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.LoginHelper;
+import model.Score;
 import model.User;
 
 /**
@@ -39,9 +40,24 @@ public class newUserServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String un = request.getParameter("user");
 		String pass = request.getParameter("pass");
+		
+		//Collect Score value from index.jsp page
+		//Integer score = Integer.parseInt(request.getParameter("score"));
+		Integer score = (Integer) request.getAttribute("initialScore");
+		System.out.println("User and Pass:" + un + pass);
+	
 		User u = new User(un, pass);
 		LoginHelper dao = new LoginHelper();
-		dao.insertItem(u);
+		dao.insertUser(u);
+		
+		System.out.println("newUserServlet>doPost'Before creation of Score'");
+		User currentUser = dao.getUserByUsername(un); 	 //Retrieve user to create Score object
+		Score s = new Score(score, currentUser.getId()); //Create score object
+		dao.insertScore(s); 							 //Insert to database
+		
+		
+		System.out.println("newUserServlet>doPost'After creation of Both'");
+		
 		getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
 	}
 

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,8 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
-import org.eclipse.persistence.jpa.jpql.parser.DateTime;
 
 
 @Entity
@@ -25,10 +28,13 @@ public class Score {
 	@Column
 	private int score;
 	
-	@Column
-	private DateTime date;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@Column(name="date", insertable=false, updatable=false)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date date;
+	
+	
+	//@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="idUser")
 	private int idUser;
 	
@@ -59,11 +65,11 @@ public class Score {
 		this.score = score;
 	}
 
-	public DateTime getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(DateTime date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 

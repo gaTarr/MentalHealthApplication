@@ -3,7 +3,9 @@
 <html>
 <title>Mental Health</title>
 <script>
+
 	function totalIt() {
+
 		var tot = 0;
     
 		for(i = 0; i < 17; i++) {
@@ -11,7 +13,13 @@
 		}
 		
 		document.getElementById("txtTotal").value = tot;
+
+		var initialScore = tot;		
+		request.setAttribute("initialScore", initialScore);
+		
 	}
+
+
 </script>
   
 <style>
@@ -273,7 +281,7 @@
 	
 	<br>
 
-	<a href = "createAccount.jsp">Create an account</a><br />
+	<a href = "create-account.jsp">Create an account</a><br />
 <div id="BarGraph">
 </div>
 
