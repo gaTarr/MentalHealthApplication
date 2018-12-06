@@ -13,9 +13,10 @@
 		}
 		
 		document.getElementById("txtTotal").value = tot;
+	
+		document.getElementById('score').value = tot;
 
-		var initialScore = tot;		
-		request.setAttribute("initialScore", initialScore);
+
 		
 	}
 
@@ -280,8 +281,10 @@
 	<label> ------------------------------------------------- </label> <br>
 	
 	<br>
-
-	<a href = "create-account.jsp">Create an account</a><br />
+<form action="getScoreServlet" method="post">
+<input type="hidden" name="score" id="score" value="notset" />
+<input type = "submit" value = "Create an Account">
+ </form><br />
 <div id="BarGraph">
 </div>
 
