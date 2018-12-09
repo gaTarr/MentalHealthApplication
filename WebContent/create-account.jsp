@@ -10,9 +10,17 @@
 </head>
 <body>
   <form method="post" action="newUserServlet">
-  Username: <input type ="text" name = "user" >
-  Password: <input type ="text" name = "pass" >
-  <input type = "text" name = "score" value="<%=userScore %>"> 
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type ="text" name = "user" ></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type ="text" name = "pass" ></td>
+			</tr>
+		</table>
+  <input type = "hidden" name = "score" value="<%=userScore %>"> 
   <input type = "submit" value="Save New Account">
   </form>
 

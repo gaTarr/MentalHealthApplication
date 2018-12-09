@@ -40,10 +40,8 @@ public class newUserServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String un = request.getParameter("user");
 		String pass = request.getParameter("pass");
+		Integer score = Integer.parseInt(request.getParameter("score"));
 		
-		//Collect Score value from index.jsp page
-		//Integer score = Integer.parseInt(request.getParameter("score"));
-		Integer score = (Integer) request.getAttribute("initialScore");
 		System.out.println("User and Pass:" + un + pass);
 	
 		User u = new User(un, pass);
