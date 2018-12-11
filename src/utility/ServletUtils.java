@@ -9,14 +9,13 @@ import model.User;
 
 public class ServletUtils {
 	
-	private static final Map<Integer, String> id_uri_map = new HashMap<Integer, String>();
-	private static final Map<String, Integer> uri_id_map = new HashMap<String, Integer>();
-	
-	public static int storeUser(HttpSession session, User loggedUser) {
+	public static void storeUser(HttpSession session, User loggedUser) {
 		session.setAttribute("loggedUser", loggedUser);
-		return 0;
 	}
 	
+	public static void loginUser(HttpSession session, User curUser) {
+		session.setAttribute("curUser", curUser);
+	}
 	public static User getLoggedUser(HttpSession session) {
 		User loggedUser = (User) session.getAttribute("loggedUser");
 		return loggedUser;

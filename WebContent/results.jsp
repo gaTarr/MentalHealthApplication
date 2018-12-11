@@ -6,7 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 <body>
-	hello
+hello
 </body>
+<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+<script type="text/javascript" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
+ <script src="GraphResults.js"></script>
+ <div id="myChart"></div>
 </html>

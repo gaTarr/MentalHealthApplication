@@ -11,8 +11,6 @@ import org.eclipse.persistence.jpa.PersistenceProvider;
 
 public class LoginHelper {
 
-
-	//static EntityManagerFactory emfactory = new PersistenceProvider().createEntityManagerFactory("users", null);
 	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("MentalHealthApplication");
 	
 	public void insertUser(User u) {
@@ -57,15 +55,13 @@ public class LoginHelper {
 	}
 
 	public boolean login(String username, String password) {
-		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("users");
 		EntityManager em = emfactory.createEntityManager();
 		User results = null;
 		
 		try {
-			TypedQuery<User> query = em.createQuery("select u.username, u.password from User u where u.username = :selectedUsername AND u.password = :selectedPassword", User.class);
+			TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.username = :selectedUsername", User.class);
 			query.setParameter("selectedUsername", username);
-			query.setParameter("selectedPassword", password);
-			try {
+			try { 
 				return true;
 			} catch(javax.persistence.NoResultException e)
 			{
@@ -73,14 +69,8 @@ public class LoginHelper {
 			} 
 		} finally {
 			em.close();
-			emfactory.close();
 			}
 		}
-	
 
-	
 
-	public void cleanUp() {
-		emfactory.close();
-	}
 }

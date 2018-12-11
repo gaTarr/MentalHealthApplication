@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.LoginHelper;
 import model.Score;
 import model.User;
+import utility.ServletUtils;
 
 /**
  * Servlet implementation class newUserServlet
@@ -56,6 +57,8 @@ public class newUserServlet extends HttpServlet {
 		
 		System.out.println("newUserServlet>doPost'After creation of Both'");
 		
+		ServletUtils.storeUser(request.getSession(), u);
+		System.out.println(request.getSession());
 		getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
 	}
 

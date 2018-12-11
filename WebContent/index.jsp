@@ -20,9 +20,10 @@
 		
 	}
 
-
 </script>
-  
+<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+
+
 <style>
 	.border {
 		border-style: solid;
@@ -50,9 +51,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Mental Health</title>
-<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="index.js"></script>
 </head>
 
 <header>
@@ -236,7 +234,7 @@
 		<label>14-18 Moderate Depression</label><br>
 		<label>19-22 Severe Depression</label><br>
 		<label>>= 23 Very Severe Depression</label><br>
-		<input type="text" id="txtTotal" readonly><button id = "btnTotal" onclick = "totalIt()">Total 1-17</button> <br>
+		<input type="text" id="txtTotal" readonly><button id = "btnTotal" onclick = "totalIt();">Total 1-17</button> <br>
 	</div>
 	
 	<p>
@@ -285,13 +283,15 @@
 <input type="hidden" name="score" id="score" value="notset" />
 <input type = "submit" value = "Create an Account">
  </form><br />
-<div id="BarGraph">
-</div>
-
+ <script src="Graph.js"></script>
+<script type="text/javascript" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
+  <div id="myChart"></div> 
 </body>
 	<div class="border">
-		<label>Login: Username: </label><input type="text" id="userName"><label> Password: </label><input type="text" id="userPassword"><button id="btnLogin">Submit</button>
-		<label>         Sign-up</label>
+		<form action="loginServlet" method="post">
+			<label>Login: Username: </label><input type="text" id="userName"><label> Password: </label><input type="text" id="userPassword"><button id="btnLogin">Submit</button>
+			<label>         Sign-up</label>
+		</form>
 	</div> <br> <br>
 </body>
 <footer>
