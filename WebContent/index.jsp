@@ -35,10 +35,6 @@
 	.spacing {
 		padding-right: 100px;
 	}
-	.makeCenter {
-    	float: left;
-    	width: 33%;
-	}
 	.bord {
 		border-style: solid;
 		padding-top: 5px;
@@ -51,6 +47,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Mental Health</title>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "GlobalStyle.css" />
 </head>
 
 <header>
@@ -295,9 +294,9 @@
 	</div> <br> <br>
 </body>
 <footer>
-		<label class="makeCenter">Medications</label>
-		<label class="makeCenter">Clinics</label>
-		<label class="makeCenter">Inpatient Facilities</label>
+		<a href="Medications.jsp" class="makeCenter">Medications</a>
+		<a href="Clinics.jsp" class="makeCenter">Clinics</a>
+		<a href="Facilities.jsp" class="makeCenter">Inpatient Facilities</a>
 </footer>
 
 </html>
