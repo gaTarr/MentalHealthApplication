@@ -1,6 +1,10 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -40,25 +44,29 @@ public class loginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("userName");
 		String password = request.getParameter("userPassword");
-		User thisUser = new User(username, password);
-		LoginHelper dao = new LoginHelper();
-		boolean result = dao.login(username, password);
-		if(result = true) {
-			RequestDispatcher rs = request.getRequestDispatcher("results");
-			request.setAttribute("username", username);
-			rs.forward(request, response);
-			return;
-		} else {
-			System.out.println("Invalid Username or Password");
-			RequestDispatcher rs = request.getRequestDispatcher("index");
-			rs.include(request, response);
+
+		try {
+			System.out.println(username);
+			System.out.println(password);
+			Class.forName("com.mysql.jdbc.Driver"); 
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mentalhealth", "root", "root");
+			Statement stmt = conn.createStatement(); 
+			ResultSet rs = stmt.executeQuery("select username, password from users where username = '"+username+"' and password = '"+password+"'");
+			
+			if(rs.next()) {
+				response.sendRedirect("results.jsp?name="+rs.getString("username"));
+				HttpSession session = request.getSession();
+				session.setAttribute("username", username);
+			} else {
+				System.out.println("Incorrect");
+			}
+		} catch (Exception e) {
+			System.out.println("failed");
+			response.sendRedirect("index.jsp");
+			e.printStackTrace();
+		} finally {
+			System.out.println("Finally");
 		}
-		
-		/**if(loginn == true) {
-			ServletUtils.storeUser(request.getSession(), thisUser);
-			System.out.println(request.getSession());
-			getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
-		}**/
 		
 	}
 
