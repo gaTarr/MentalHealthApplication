@@ -31,6 +31,7 @@
 		padding-bottom: 5px;
 		padding-left: 3px;
 		margin-right: 200px;
+		text-align: center;
 	}
 	.spacing {
 		padding-right: 100px;
@@ -275,17 +276,25 @@
 			<option value="2">Severe</option>
 		</select> 
 	</p>
-	<label> ------------------------------------------------- </label> <br>
+	<label> ------------------------------------------------- </label> <br />
 	
-	<br>
-<form action="getScoreServlet" method="post">
-<input type="hidden" name="score" id="score" value="notset" />
-<input type = "submit" value = "Create an Account">
- </form><br />
+	<br />
+
  <script src="Graph.js"></script>
 <script type="text/javascript" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
   <div id="myChart"></div> 
-</body>
+	<br />
+	
+	<h3>To save your results, login or create an account.</h3>	
+	<div class="border">
+		<form action="getScoreServlet" method="post">
+		<label>Sign Up: </label>
+		<input type="hidden" name="score" id="score" value="notset" />
+		<input type = "submit" value = "Create an Account">
+ 		</form>
+ 	</div> <br />
+ 	<br />
+ 	
 	<div class="border">
 		<form action="loginServlet" method="post">
 			<label>Login: Username: </label><input type="text" id="userName"><label> Password: </label><input type="text" id="userPassword"><button id="btnLogin">Submit</button>
@@ -294,9 +303,8 @@
 	</div> <br> <br>
 </body>
 <footer>
-		<a href="Medications.jsp" class="makeCenter">Medications</a>
-		<a href="Clinics.jsp" class="makeCenter">Clinics</a>
-		<a href="Facilities.jsp" class="makeCenter">Inpatient Facilities</a>
+		<a href="medications.jsp" class="makeCenter">Medications</a>
+		<a href="facilities_clinics.jsp" class="makeCenter">Clinics and Facilities</a>
 </footer>
 
 </html>
