@@ -61,7 +61,7 @@
 </header>
 <body>
 	<p>
-		<label>Depressed Mood: (Gloomy attitude, pessimism about the future, feeling of sadness, tendency to weep) </label> <br>
+		<label>1. Depressed Mood: (Gloomy attitude, pessimism about the future, feeling of sadness, tendency to weep)</label> <br>
 		<select id = "q0">
 			<option value="0" selected>Absent</option>
 			<option value="1">Sadness etc.</option>
@@ -72,7 +72,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Feelings of Guilt </label> <br>
+		<label>2. Feelings of Guilt</label> <br>
 		<select id = "q1">
 			<option value="0" selected>Absent</option>
 			<option value="1">Self-reproach, feels he/she has let people down</option>
@@ -83,7 +83,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Suicide </label> <br>
+		<label>3. Suicide</label> <br>
 		<select id = "q2">
 			<option value="0" selected>Absent</option>
 			<option value="1">Feels life is not worth living</option>
@@ -94,7 +94,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Insomnia - Inital (Difficulty in falling asleep) </label> <br>
+		<label>4. Insomnia - Initial (Difficulty in falling asleep)</label> <br>
 		<select id = "q3">
 			<option value="0" selected>Absent</option>
 			<option value="1">Occasional</option>
@@ -103,7 +103,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Insomnia - Middle (Complains of being restless and disturbed during the night. Waking during the night) </label> <br>
+		<label>5. Insomnia - Middle (Complains of being restless and disturbed during the night. Waking during the night)</label> <br>
 		<select id = "q4">
 			<option value="0" selected>Absent</option>
 			<option value="1">Occasional</option>
@@ -112,7 +112,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Insomnia - Delayed (Waking in early hours of the morning and unable to fall asleep again) </label> <br>
+		<label>6. Insomnia - Delayed (Waking in early hours of the morning and unable to fall asleep again)</label> <br>
 		<select id = "q5">
 			<option value="0" selected>Absent</option>
 			<option value="1">Occasional</option>
@@ -121,7 +121,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Work and Interests </label> <br>
+		<label>7. Work and Interests</label> <br>
 		<select id = "q6">
 			<option value="0" selected>No difficulty</option>
 			<option value="1">Feelings of incapacity, listlessness, indecision, and vacillation</option>
@@ -133,7 +133,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Retardation (Slowness of thought, speech, and activity; apathy; stupor)</label> <br>
+		<label>8. Retardation (Slowness of thought, speech, and activity; apathy; stupor)</label> <br>
 		<select id = "q7">
 			<option value="0" selected>Absent</option>
 			<option value="1">Slight retardation at interview</option>
@@ -144,7 +144,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Agitation (Restlessness associated with anxiety)</label> <br>
+		<label>9. Agitation (Restlessness associated with anxiety)</label> <br>
 		<select id = "q8">
 			<option value="0" selected>Absent</option>
 			<option value="1">Occasional</option>
@@ -153,7 +153,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Anxiety - Psychic</label> <br>
+		<label>10. Anxiety - Psychic</label> <br>
 		<select id = "q9">
 			<option value="0" selected>No difficulty</option>
 			<option value="1">Tension and irritability</option>
@@ -164,7 +164,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Anxiety - Somatic</label> <br>
+		<label>11. Anxiety - Somatic</label> <br>
 		<select id = "q10">
 			<option value="0" selected>Absent</option>
 			<option value="1">Mild</option>
@@ -175,7 +175,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Somatic Symptoms - Gastrointestinal (Loss of appetite, heavy feeling in abdomen; constipation)</label> <br>
+		<label>12. Somatic Symptoms - Gastrointestinal (Loss of appetite, heavy feeling in abdomen; constipation)</label> <br>
 		<select id = "q11">
 			<option value="0" selected>Absent</option>
 			<option value="1">Mild</option>
@@ -184,7 +184,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Somatic Symptoms - General (Heaviness in limbs, back or head; diffuse backache; loss of energy and fatiguability)</label> <br>
+		<label>13. Somatic Symptoms - General (Heaviness in limbs, back or head; diffuse backache; loss of energy and fatiguability)</label> <br>
 		<select id = "q12">
 			<option value="0" selected>Absent</option>
 			<option value="1">Mild</option>
@@ -193,7 +193,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Genital Symptoms (Loss of libido, menstrual disturbances)</label> <br>
+		<label>14. Genital Symptoms (Loss of libido, menstrual disturbances)</label> <br>
 		<select id = "q13">
 			<option value="0" selected>Absent</option>
 			<option value="1">Mild</option>
@@ -202,7 +202,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Hypochondriasis</label> <br>
+		<label>15. Hypochondriasis</label> <br>
 		<select id = "q14">
 			<option value="0" selected>Not present</option>
 			<option value="1">Self-absorption (bodily)</option>
@@ -213,7 +213,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Weight Loss</label> <br>
+		<label>16. Weight Loss</label> <br>
 		<select id = "q15">
 			<option value="0" selected>No weight loss</option>
 			<option value="1">Slight</option>
@@ -222,7 +222,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Insight (Insight must be interpreted in terms of patient's understanding and background)</label> <br>
+		<label>17. Insight (Insight must be interpreted in terms of patient's understanding and background)</label> <br>
 		<select id = "q16">
 			<option value="0" selected>No loss</option>
 			<option value="1">Partial or doubtfull loss</option>
@@ -240,7 +240,7 @@
 	</div>
 	
 	<p>
-		<label> Diurnal Variation</label> <br>
+		<label>18. Diurnal Variation</label> <br>
 		<select id = "q17">
 			<option value="0" selected>No variation</option>
 			<option value="1">Mild variation</option>
@@ -249,7 +249,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Depresonalization and Derealization (feelings of unreality, nihilistic ideas)</label> <br>
+		<label>19. Depersonalization and Derealization (Feelings of unreality, nihilistic ideas)</label> <br>
 		<select id = "q18">
 			<option value="0" selected>Absent</option>
 			<option value="1">Mild</option>
@@ -260,7 +260,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Paranoid Symptoms (Not with a depressive quality)</label> <br>
+		<label>20. Paranoid Symptoms (Not with a depressive quality)</label> <br>
 		<select id = "q19">
 			<option value="0" selected>None</option>
 			<option value="1">Suspicious</option>
@@ -271,7 +271,7 @@
 	</p>
 	<label> ------------------------------------------------- </label> <br>
 	<p>
-		<label> Obsessional Symptoms (Obsessive thoughts and compulsions against which the patient struggles)</label> <br>
+		<label>21. Obsessional Symptoms (Obsessive thoughts and compulsions against which the patient struggles)</label> <br>
 		<select id = "q20">
 			<option value="0" selected>Absent</option>
 			<option value="1">Mild</option>
