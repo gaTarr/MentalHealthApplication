@@ -5,6 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Facilities and Clinics</title>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "GlobalStyle.css" />
 <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 <script src="index.js"></script>
@@ -53,4 +56,8 @@
 	</div>
 
 </body>
+<footer>
+		<a href="medications.jsp" class="makeCenter">Medications</a>
+		<a href="index.jsp" class="makeCenter">Home</a>
+</footer>
 </html>
