@@ -14,7 +14,7 @@
 </body>
 <footer>
 		<a href="Medications.jsp" class="makeCenter">Medications</a>
-		<a href="Facilities.jsp" class="makeCenter">Inpatient Facilities</a>
+		<a href="Facilities.jsp" class="makeCenter">Inpatient Failities</a>
 		<a href="index.jsp" class="makeCenter">Home</a>
 </footer>
 </html>

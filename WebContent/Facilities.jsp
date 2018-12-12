@@ -13,7 +13,7 @@
 
 </body>
 <footer>
-		<a href="Medications.jsp" class="makeCenter">Medications</a>
+		<a href="Medications.jsp" class="makeCenter">Medicatins</a>
 		<a href="Clinics.jsp" class="makeCenter">Clinics</a>
 		<a href="index.jsp" class="makeCenter">Home</a>
 </footer>
