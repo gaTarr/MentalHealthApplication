@@ -5,6 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "GlobalStyle.css" />
 </head>
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 <body>
@@ -14,4 +17,10 @@ hello
 <script type="text/javascript" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
  <script src="GraphResults.js"></script>
  <div id="myChart"></div>
+ 
+ <footer>
+ 		<a href="index.jsp" class="makeCenter">Home</a>
+		<a href="medications.jsp" class="makeCenter">Medications</a>
+		<a href="facilities_clinics.jsp" class="makeCenter">Facilites and Clinics</a>
+</footer>
 </html>
