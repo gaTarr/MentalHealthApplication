@@ -6,6 +6,7 @@
 <script>
 	function totalIt() {
 		var tot = 0;
+    
 		for(i = 0; i < 17; i++) {
 			tot = tot + parseInt(document.getElementById("q" + i).selectedIndex);
 		}
@@ -13,6 +14,7 @@
 		document.getElementById("txtTotal").value = tot;
 	}
 </script>
+  
 <style>
 	.border {
 		border-style: solid;
@@ -32,6 +34,7 @@
 		width: 35%;
 	}
 </style>
+
 <head>
 <meta charset="ISO-8859-1">
 <title>Mental Health</title>
@@ -39,6 +42,7 @@
    type = "text/css"
    href = "GlobalStyle.css" />
 </head>
+
 <header>
 <h1>Mental Health Questionnaire</h1>
 <h2>This webpage is to test if you have depression, and if so, how severe it is.</h2>
@@ -275,4 +279,5 @@
 		<a href="Clinics.jsp" class="makeCenter">Clinics</a>
 		<a href="Facilities.jsp" class="makeCenter">Inpatient Facilities</a>
 </footer>
+
 </html>
