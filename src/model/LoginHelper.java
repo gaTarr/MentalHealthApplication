@@ -1,9 +1,16 @@
 package model;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Parameter;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
@@ -54,27 +61,37 @@ public class LoginHelper {
 		return found;
 	}
 
-	public boolean login(String username, String password) {
+	public boolean login(String uname, String pword) {
 		EntityManager em = emfactory.createEntityManager();
 		User results = null;
 		boolean st = false;
-		
+		System.out.println("0");
 		try {
-			TypedQuery<User> query = em.createQuery("SELECT * FROM User u WHERE u.username=? and u.password=?", User.class);
-			query.setParameter(1, username);
-			query.setParameter(2, password);
-			results = query.getSingleResult();
-			try { 
+			em.getTransaction().begin();	
+			TypedQuery<User> queryU = em.createQuery("select u from User u where u.username = :selectedUsername", User.class);
+			
+			queryU.setParameter("selectedUsername", uname);
+			User found = queryU.getSingleResult();
+
+			System.out.println(uname);
+			if(found.getUsername() != null) {
+				System.out.println(uname);
 				st = true;
-			} catch(javax.persistence.NoResultException e)
-			{
+				return st;
+			} else {
 				st = false;
-			} 
-		} finally {
+			}
+			System.out.println("5");
 			em.close();
+			return st;
+		} catch (Exception e) {
+			System.out.println("2");
+			e.printStackTrace();
+			st = false;
+		} finally { 
+			em.close();
+			System.out.println("3");
 			return st;
 			}
 		}
-
-
 }

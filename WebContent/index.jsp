@@ -297,7 +297,7 @@
  	
 	<div class="border">
 		<form action="loginServlet" method="post">
-			<label>Login: Username: </label><input type="text" id="userName"><label> Password: </label><input type="text" id="userPassword"><button id="btnLogin">Submit</button>
+			<label>Login: Username: </label><input type="text" id="userName" name="userName"><label> Password: </label><input type="text" id="userPassword" name="userPassword"><button id="btnLogin">Submit</button>
 			<label>         Sign-up</label>
 		</form>
 	</div> <br> <br>
