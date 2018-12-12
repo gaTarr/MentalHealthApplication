@@ -33,29 +33,32 @@ public class loginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	/* (non-Javadoc)
+	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("userName");
 		String password = request.getParameter("userPassword");
 		User thisUser = new User(username, password);
 		LoginHelper dao = new LoginHelper();
-		boolean loginn = dao.login(username, password);
-		if(loginn == false) {
-			String errorMsg = "Invalid Username or Password";
-			request.setAttribute("errorMessage", errorMsg);
-			System.out.println(errorMsg);
-			System.out.println("NO");
-			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/index.jsp");
-			dispatcher.forward(request, response);
+		boolean result = dao.login(username, password);
+		if(result = true) {
+			RequestDispatcher rs = request.getRequestDispatcher("results");
+			request.setAttribute("username", username);
+			rs.forward(request, response);
 			return;
+		} else {
+			System.out.println("Invalid Username or Password");
+			RequestDispatcher rs = request.getRequestDispatcher("index");
+			rs.include(request, response);
 		}
 		
-		if(loginn == true) {
-			
+		/**if(loginn == true) {
 			ServletUtils.storeUser(request.getSession(), thisUser);
 			System.out.println(request.getSession());
 			getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
-		}
+		}**/
 		
 	}
 

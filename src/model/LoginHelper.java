@@ -57,18 +57,22 @@ public class LoginHelper {
 	public boolean login(String username, String password) {
 		EntityManager em = emfactory.createEntityManager();
 		User results = null;
+		boolean st = false;
 		
 		try {
-			TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.username = :selectedUsername", User.class);
-			query.setParameter("selectedUsername", username);
+			TypedQuery<User> query = em.createQuery("SELECT * FROM User u WHERE u.username=? and u.password=?", User.class);
+			query.setParameter(1, username);
+			query.setParameter(2, password);
+			results = query.getSingleResult();
 			try { 
-				return true;
+				st = true;
 			} catch(javax.persistence.NoResultException e)
 			{
-				return false;
+				st = false;
 			} 
 		} finally {
 			em.close();
+			return st;
 			}
 		}
 
