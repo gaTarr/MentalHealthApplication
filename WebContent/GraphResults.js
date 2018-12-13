@@ -1,5 +1,5 @@
 setTimeout(window.onload = function() {  
-    var scores = [1,2,3,4];
+    var scores = [test];
 	var count = [];
 
     console.log(scores);

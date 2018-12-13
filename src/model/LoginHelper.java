@@ -60,6 +60,28 @@ public class LoginHelper {
 		em.close();
 		return found;
 	}
+	
+	public String getScores(int userID) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+
+		List<Integer> query = em.createQuery("select s.score from Score s where s.idUser = "+userID+"", Integer.class).getResultList();
+		int[] scores = new int[query.size()];
+		
+		for (int i = 0; i < query.size(); i++) {
+			scores[i] = query.get(i);
+		}
+		
+		String result = "";
+		for(int i = 0; i < scores.length; i++) {
+			result += scores[i];
+			if(i < scores.length -1) {
+				result += ", ";
+			}
+		}
+		System.out.println(result);
+		return result;
+	}
 
 	public boolean login(String uname, String pword) {
 		EntityManager em = emfactory.createEntityManager();
