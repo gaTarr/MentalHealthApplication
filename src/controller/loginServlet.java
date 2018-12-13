@@ -44,6 +44,11 @@ public class loginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("userName");
 		String password = request.getParameter("userPassword");
+		String userScore = (String) request.getParameter("loginScore");
+		String scores;
+		Integer score = Integer.parseInt(userScore);
+		
+		LoginHelper dao = new LoginHelper();
 
 		try {
 			System.out.println(username);
@@ -54,9 +59,16 @@ public class loginServlet extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("select username, password from users where username = '"+username+"' and password = '"+password+"'");
 			
 			if(rs.next()) {
-				response.sendRedirect("results.jsp?name="+rs.getString("username"));
 				HttpSession session = request.getSession();
 				session.setAttribute("username", username);
+				
+				System.out.println("newUserServlet>doPost'Before creation of Score'");
+				User currentUser = dao.getUserByUsername(username); 	 //Retrieve user to create Score object
+				Score s = new Score(score, currentUser.getId()); //Create score object
+				dao.insertScore(s); 							 //Insert to database
+				scores = dao.getScores(currentUser.getId());
+				request.setAttribute("allScores", scores);
+				response.sendRedirect("results.jsp?name="+rs.getString("username")+"");
 			} else {
 				System.out.println("Incorrect");
 			}
