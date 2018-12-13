@@ -54,7 +54,7 @@ public class loginServlet extends HttpServlet {
 			System.out.println(username);
 			System.out.println(password);
 			Class.forName("com.mysql.jdbc.Driver"); 
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mentalhealth", "root", "root");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mental_health_app", "root", "dbDMACC#1");
 			Statement stmt = conn.createStatement(); 
 			ResultSet rs = stmt.executeQuery("select username, password from users where username = '"+username+"' and password = '"+password+"'");
 			
@@ -62,13 +62,16 @@ public class loginServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				session.setAttribute("username", username);
 				
-				System.out.println("newUserServlet>doPost'Before creation of Score'");
+				System.out.println("loginServlet>doPost'Before creation of Score'");
 				User currentUser = dao.getUserByUsername(username); 	 //Retrieve user to create Score object
 				Score s = new Score(score, currentUser.getId()); //Create score object
 				dao.insertScore(s); 							 //Insert to database
 				scores = dao.getScores(currentUser.getId());
 				request.setAttribute("allScores", scores);
-				response.sendRedirect("results.jsp?name="+rs.getString("username")+"");
+				System.out.println(scores);
+				getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
+				//response.sendRedirect("results.jsp?name="+rs.getString("username")+"");
+				System.out.println("Success!");
 			} else {
 				System.out.println("Incorrect");
 			}

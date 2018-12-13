@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<% String userScores = (String)request.getAttribute("allScores"); %>
 <link rel = "stylesheet"
    type = "text/css"
    href = "GlobalStyle.css" />
@@ -12,10 +13,14 @@
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 <body>
 hello
+	<p><%=userScores %></p>
+	<p>"${userScores }"</p>	
+	<br />
+	<br />
 </body>
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 <script type="text/javascript" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
-<% int[] yourScores = (int []) request.getAttribute("allScores"); %>
+<%-- int[] yourScores = (int []) request.getAttribute("allScores"); --%> 
 
 <%= request.getAttribute("allScores") %>
 
