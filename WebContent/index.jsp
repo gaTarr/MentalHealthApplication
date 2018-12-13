@@ -310,8 +310,9 @@
 	</div> <br> <br> 
 </body>
 <footer>
-		<a href="medications.jsp" class="makeCenter">Medications</a>
-		<a href="facilities_clinics.jsp" class="makeCenter">Clinics and Facilities</a>
+		<a href="index.jsp" class="makeCenter">Home</a>
+		<a href="MedicationsServlet" class="makeCenter">Medications</a>
+		<a href="FacilitiesServlet" class="makeCenter">Clinics and Facilities</a>
 </footer>
 
 </html>

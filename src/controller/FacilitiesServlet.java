@@ -29,11 +29,17 @@ public class FacilitiesServlet extends HttpServlet { // Class FacilitiesServlet 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException { // doGet method.
 		FacilitiesHelper dao = new FacilitiesHelper();
+		ClinicsHelper dao2 = new ClinicsHelper();
 		request.setAttribute("facilities", dao.showAllFacilities());
+		request.setAttribute("clinics", dao2.showAllClinics());
 
 		if (dao.showAllFacilities().isEmpty()) { // Begin if statement.
-			request.setAttribute("facilities", " ");
+			request.setAttribute("facilities", "There are currently no facilities available.");
 		} // Close if statement.
+		if (dao2.showAllClinics().isEmpty()) { // Begin if statement.
+			request.setAttribute("facilities", "There are currently no clinics available.");
+		} // Close if statement.
+		
 		getServletContext().getRequestDispatcher("/facilities_clinics.jsp").forward(request, response);
 	}
 

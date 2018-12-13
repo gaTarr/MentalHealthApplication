@@ -17,7 +17,7 @@ public class FacilitiesHelper { // class FacilitiesHelper.
 	/**
 	 * EntityManagerFactory
 	 */
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("mental_health_app");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("MentalHealthApplication");
 
 	/**
 	 * CleanUp Method.

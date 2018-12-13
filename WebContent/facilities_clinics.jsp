@@ -4,16 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>List of Facilities and Clinics in Iowa</title>
-<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-<script
-	src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="index.js"></script>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "GlobalStyle.css" />
 </head>
 <body>
-	<form method="post" action="FacilitiesServlet"></form>
-	<form method="post" action="ClinicsServlet"></form>
 	<div class="container">
 		<div class="table-responsive">
 			<p>
@@ -29,10 +26,10 @@
 				<c:forEach items="${requestScope.facilities}"
 					var="currentfacilities">
 					<tr>
-						<th>${currentfacilities.name}</th>
-						<th>${currentfacilities.city}</th>
-						<th>${currentfacilities.state}</th>
-						<th>${currentfacilities.webaddress}</th>
+						<td>${currentfacilities.name}</td>
+						<td>${currentfacilities.city}</td>
+						<td>${currentfacilities.state}</td>
+						<td>${currentfacilities.webaddress}</td>
 					</tr>
 				</c:forEach>
 			</table>
@@ -50,19 +47,19 @@
 				</tr>
 				<c:forEach items="${requestScope.clinics}" var="currentclinics">
 					<tr>
-						<th>${currentclinics.clinicName}</th>
-						<th>${currentclinics.city}</th>
-						<th>${currentclinics.state}</th>
-						<th>${currentclinics.webaddress}</th>
+						<td>${currentclinics.clinicName}</td>
+						<td>${currentclinics.city}</td>
+						<td>${currentclinics.state}</td>
+						<td>${currentclinics.webaddress}</td>
 					</tr>
 				</c:forEach>
 			</table>
 		</div>
 	</div>
 </body>
- <footer>
- 		<a href="index.jsp" class="makeCenter">Home</a>
-		<a href="medications.jsp" class="makeCenter">Medications</a>
-		<a href="facilities_clinics.jsp" class="makeCenter">Facilites and Clinics</a>
+<footer>
+		<a href="index.jsp" class="makeCenter">Home</a>
+		<a href="MedicationsServlet" class="makeCenter">Medications</a>
+		<a href="FacilitiesServlet" class="makeCenter">Clinics and Facilities</a>
 </footer>
 </html>

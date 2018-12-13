@@ -25,9 +25,9 @@
   </form>
 
 </body>
- <footer>
- 		<a href="index.jsp" class="makeCenter">Home</a>
-		<a href="medications.jsp" class="makeCenter">Medications</a>
-		<a href="facilities_clinics.jsp" class="makeCenter">Facilites and Clinics</a>
+<footer>
+		<a href="index.jsp" class="makeCenter">Home</a>
+		<a href="MedicationsServlet" class="makeCenter">Medications</a>
+		<a href="FacilitiesServlet" class="makeCenter">Clinics and Facilities</a>
 </footer>
 </html>
