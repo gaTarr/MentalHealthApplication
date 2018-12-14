@@ -61,10 +61,12 @@ public class LoginHelper {
 		return found;
 	}
 	
-	public String getScores(int userID) {
+	public String getScores(String uname) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 
+		User found = getUserByUsername(uname);
+		int userID = found.getId();
 		List<Integer> query = em.createQuery("select s.score from Score s where s.idUser = "+userID+"", Integer.class).getResultList();
 		int[] scores = new int[query.size()];
 		
@@ -73,14 +75,16 @@ public class LoginHelper {
 		}
 		
 		String result = "";
-		for(int i = 0; i < scores.length; i++) {
+		for (int i = 0; i < scores.length; i++) {
 			result += scores[i];
-			if(i < scores.length -1) {
-				result += ", ";
+			if(i < scores.length - 1) {
+				result += ",";
 			}
 		}
-		System.out.println(result);
-		return result;
+		
+		String scoreResult = result.toString();
+		
+		return scoreResult;
 	}
 
 	public boolean login(String uname, String pword) {

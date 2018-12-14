@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Score Results</title>
 <% String userScores = (String)request.getAttribute("allScores"); %>
 <link rel = "stylesheet"
    type = "text/css"
@@ -12,22 +12,14 @@
 </head>
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 <body>
-hello
-	<p><%=userScores %></p>
-	<p>"${userScores }"</p>	
 	<br />
 	<br />
 </body>
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 <script type="text/javascript" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
-<%-- int[] yourScores = (int []) request.getAttribute("allScores"); --%> 
-
-<%= request.getAttribute("allScores") %>
-
+<input type="hidden" name="score" id="score" value=<%=userScores %> />
  <script src="GraphResults.js"></script>
  <div id="myChart"></div>
- 
- 
 <footer>
 		<a href="index.jsp" class="makeCenter">Home</a>
 		<a href="MedicationsServlet" class="makeCenter">Medications</a>

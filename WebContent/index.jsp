@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <title>Mental Health</title>
@@ -17,14 +16,11 @@
 		document.getElementById('score').value = tot;
 		
 		document.getElementById('loginScore').value = tot;
-
-
-		
+	
 	}
 
 </script>
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
-
 
 <style>
 	.border {
@@ -282,11 +278,10 @@
 	
 	<br />
 
- <script src="Graph.js"></script>
+<script src="Graph.js"></script>
 <script type="text/javascript" src="https://cdn.zingchart.com/zingchart.min.js"></script> 
   <div id="myChart"></div> 
 	<br />
-	
 	<h3>To save your results, login or create an account.</h3>	
 	<div class="border">
 		<form action="getScoreServlet" method="post">
