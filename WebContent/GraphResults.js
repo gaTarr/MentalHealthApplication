@@ -1,8 +1,16 @@
 setTimeout(window.onload = function() {  
-    var scores = [test];
+	var scores = " ";
+	scores = document.getElementById("score").value;
 	var count = [];
 
-    console.log(scores);
+	var scoreString = scores.split(",");
+	console.log(scoreString);
+	var arrScores = [];
+	for(var i = 0; i < scoreString.length; i++) {
+		arrScores[i] = parseInt(scoreString[i]);
+		console.log(arrScores[i]);
+	}
+
 	for (var i = 0; i < scores.length; i++) {
 		count[i] = i + 1;
 	}
@@ -25,7 +33,7 @@ setTimeout(window.onload = function() {
 	        "line-width": 1
 	      },
 	     "series": [{
-			"values": scores
+			"values": arrScores
 	      }]
 	    }
 	  });

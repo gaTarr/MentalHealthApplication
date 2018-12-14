@@ -1,4 +1,5 @@
 setTimeout(window.onclick = function() {  
+
     var scores = [parseInt(document.getElementById("score").value)];
     var count = [];
 
