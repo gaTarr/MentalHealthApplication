@@ -1,6 +1,8 @@
 # MentalHealthApplication
 Mental Health Application Based Upon The Hamilton Depression Rating Scale (HAM-D) Questionnaire.
 
+Created by: Sage Hackbarth, Craig Longnecker, Carl Phillips and Greg Tarr.
+
 Background
 
 We present a fully articulated protocol for the Hamilton Rating Scale for Depression (HAM-D), including item scoring rules, rater training procedures, and a data management algorithm to increase accuracy of scores prior to outcome analyses. The latter involves identifying potentially inaccurate scores as interviews with discrepancies between two independent raters on the basis of either scores (≥ 5-point difference) or meeting threshold for depression recurrence status, a long-term treatment outcome with public health significance. Discrepancies are resolved by assigning two new raters, identifying items with disagreement per an algorithm, and reaching consensus on the most accurate scores for those items.
