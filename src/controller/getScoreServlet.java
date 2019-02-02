@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class getScoreServlet
+ * @author - Carl Phillips
+ * @description Gets the score from the form on the test page and sets the score as an attribute as initial score
  */
 @WebServlet("/getScoreServlet")
 public class getScoreServlet extends HttpServlet {
@@ -27,10 +29,10 @@ public class getScoreServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String userScore = (String) request.getParameter("score");
+		String userScore = (String) request.getParameter("score");										//gets the score from the last page
 		System.out.println(userScore);
-		request.setAttribute("initialScore", userScore);
-		getServletContext().getRequestDispatcher("/create-account.jsp").forward(request, response);
+		request.setAttribute("initialScore", userScore);												//sets the score from the test as initialScore
+		getServletContext().getRequestDispatcher("/create-account.jsp").forward(request, response);		//sends the user to the create-account page 
 		System.out.println("Got current score - forwarding to create-account.jsp");
 	}
 

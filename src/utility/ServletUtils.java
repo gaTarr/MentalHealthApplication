@@ -1,3 +1,8 @@
+// @author - Carl Phillips
+// @Description - servlet utilities to store a user to get results
+// logs the user in
+// get what user is currently logged in
+
 package utility;
 
 import java.util.HashMap;

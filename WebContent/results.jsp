@@ -2,6 +2,12 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<!-- author - Carl Phillips -->
+<!-- This page serves to show the user his results and past results after taking the test.
+	 It retrieves the information from the database and shows it in a bar graph. 
+	 It gets the scores in a string from the attribute allScores and the GraphResults.js file
+	 takes it and converts it into an array, which can be used by the graph. 
+	 The graph is in a div with the id myChart -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Score Results</title>
