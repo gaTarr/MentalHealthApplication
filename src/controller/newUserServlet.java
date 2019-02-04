@@ -14,6 +14,9 @@ import utility.ServletUtils;
 
 /**
  * Servlet implementation class newUserServlet
+ * @author - Carl Phillips
+ * @description - Creates a new user in the database with a username and password.
+ * 				  The score is saved related to the user.
  */
 @WebServlet("/newUserServlet")
 public class newUserServlet extends HttpServlet {
@@ -28,12 +31,6 @@ public class newUserServlet extends HttpServlet {
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 *
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
     
@@ -57,7 +54,7 @@ public class newUserServlet extends HttpServlet {
 		
 		System.out.println("newUserServlet>doPost'After creation of Both'");
 		
-		ServletUtils.storeUser(request.getSession(), u);
+		ServletUtils.storeUser(request.getSession(), u); //Stores the user in the session to use to retrieve data later
 		System.out.println(request.getSession());
 		getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
 	}

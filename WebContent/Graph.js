@@ -1,6 +1,9 @@
-setTimeout(window.onclick = function() {  
+// @author - Carl Phillips
+// @description - graph that is used on the main test page
 
-    var scores = [parseInt(document.getElementById("score").value)];
+setTimeout(window.onclick = function() {  						
+
+    var scores = [parseInt(document.getElementById("score").value)];			//gets the score and parses it to an int
     var count = [];
 
     console.log(scores);
